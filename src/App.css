@@ -1,38 +1,125 @@
-.App {
+html,body{
+  margin:0;
+  height:100%;
+}
+
+.App{
+  background-color: #8DE2FF;
   text-align: center;
+  height: 100%;
+  padding: 2rem 0;
+  color: gainsboro;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER styles */
+
+.header{
+  padding: 6rem 2rem;
+  background: url(./header_background.png);
+  box-shadow: 1rem 1rem 0.5rem #888888;
+  border-radius: 15px 0 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* welcome to */
+.header-welcome-message{      
+  letter-spacing: 0.3rem;
   color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2.5s ease-in;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* Your friend */
+.header-title{
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  color: skyblue;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  animation: fadein 2.5s ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes typing{
+
+  from{
+    width: 0;
+    margin-left: 35rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  to{
+    width: 100%;
+  }
+
+}
+
+@keyframes fadein{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+
+/* ABOUT styles */
+
+.about{
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: #1261A0;
+  box-shadow: 1rem 1rem 0.5rem #888888;
+  border-radius: 15px 0 15px 0;
+}
+
+.copyright{
+  color: black;
+}
+
+
+/* for smaller screens */
+
+@media(max-width: 1000px){      
+
+  .header{
+    margin: 0 1rem;
+    padding: 3rem 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #888888;
+    background-position: center;
+  }
+
+  .header-welcome-message{
+    letter-spacing: 0.3rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s ease-out;
+  }
+
+  .header-title{
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+    color: skyblue;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    animation: fadein 2s linear;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .about{
+    margin: 3rem 1rem;
+    padding: 2rem 1rem;
+    background-color: #1261A0;
+    box-shadow: 0.5rem 0.5rem 0.5rem #888888;
+    border-radius: 15px 0 15px 0;
   }
 }
